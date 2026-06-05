@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mangroves: Blue Carbon & Smarter Seas — Jejakin (public)</title>
+<meta name="description" content="Jejakin at Ocean Week Brunei 2026 — Carbon Atlas, Carbon IQ & Carbon Space for blue carbon and smarter seas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Top toolbar -->
+<header id="toolbar">
+  <div class="tb-left">
+    <img src="assets/logo-jejakin.png" alt="Jejakin" class="tb-logo">
+    <span class="tb-sep"></span>
+    <span class="tb-event">Ocean Week Brunei 2026</span>
+  </div>
+  <div class="tb-right">
+    <button id="lang-toggle" class="tb-btn" title="Bahasa Indonesia / English">
+      <span class="flag">🇮🇩</span><span id="lang-label">ID</span> / <span class="flag">🇬🇧</span><span id="lang-label2">EN</span>
+    </button>
+    <button id="present-btn" class="tb-btn" title="Present full-screen on this screen (F5) — clicker works here">▶ <span class="en">Present</span><span class="id">Present</span></button>
+    <button id="presenter-btn" class="tb-btn" title="Presenter view — opens a second window for the projector (2 screens)">⧉ <span class="en">Presenter</span><span class="id">Presenter</span></button>
+    <button id="pdf-btn" class="tb-btn" title="Export to PDF">⬇ <span data-i18n="pdf">PDF</span></button>
+    <button id="overview-btn" class="tb-btn" title="Slide overview (O)">▦</button>
+  </div>
+</header>
+
+<!-- Progress bar -->
+<div id="progress"><div id="progress-fill"></div></div>
+
+<!-- Deck mounts here -->
+<main id="deck" aria-live="polite"></main>
+
+<!-- Overview grid -->
+<div id="overview" class="hidden"><div id="overview-grid"></div></div>
+
+<!-- Bottom controls -->
+<nav id="controls">
+  <button id="prev" class="ctrl-btn" aria-label="Previous">‹</button>
+  <span id="counter">1 / 1</span>
+  <button id="next" class="ctrl-btn" aria-label="Next">›</button>
+</nav>
+
+<script src="js/slides-public.js"></script>
+<script src="js/deck.js"></script>
+</body>
+</html>
