@@ -215,21 +215,26 @@
   let panel = null, timerEl = null, nowN = null, nowT = null, nextT = null, notesEl = null;
   let startMs = 0, timerInt = 0;
 
+  let curFrame = null, nextFrame = null;
   function buildPanel() {
     panel = document.createElement('aside');
     panel.id = 'presenter-panel';
     panel.innerHTML =
       '<div class="pp-head"><span class="pp-tag">PRESENTER VIEW</span>' +
+        '<span class="pp-meta"><b id="pp-now-n"></b> · <span id="pp-now-t"></span></span>' +
         '<span class="pp-timer" id="pp-timer">00:00</span></div>' +
-      '<div class="pp-now"><span class="pp-lbl">NOW</span> <b id="pp-now-n"></b> ' +
-        '<span id="pp-now-t"></span></div>' +
-      '<div class="pp-next"><span class="pp-lbl">NEXT</span> <span id="pp-next-t">—</span></div>' +
-      '<div class="pp-notes" id="pp-notes"></div>' +
-      '<div class="pp-ctrls">' +
-        '<button id="pp-prev" class="pp-b">‹ Prev</button>' +
-        '<button id="pp-next-btn" class="pp-b pp-b-main">Next ›</button>' +
-        '<button id="pp-black" class="pp-b" title="Blank (B)">⬛</button>' +
-        '<button id="pp-end" class="pp-b pp-b-end">✕ End</button>' +
+      '<div class="pp-stage">' +
+        '<div class="pp-pane pp-cur"><div class="pp-lbl">CURRENT</div><div class="pp-frame" id="pp-cur-frame"></div></div>' +
+        '<div class="pp-aside">' +
+          '<div class="pp-pane pp-nextpane"><div class="pp-lbl">NEXT <span id="pp-next-t"></span></div><div class="pp-frame" id="pp-next-frame"></div></div>' +
+          '<div class="pp-notes" id="pp-notes"></div>' +
+          '<div class="pp-ctrls">' +
+            '<button id="pp-prev" class="pp-b">‹ Prev</button>' +
+            '<button id="pp-next-btn" class="pp-b pp-b-main">Next ›</button>' +
+            '<button id="pp-black" class="pp-b" title="Blank (B)">⬛</button>' +
+            '<button id="pp-end" class="pp-b pp-b-end">✕ End</button>' +
+          '</div>' +
+        '</div>' +
       '</div>';
     document.body.appendChild(panel);
     timerEl = panel.querySelector('#pp-timer');
@@ -237,10 +242,38 @@
     nowT = panel.querySelector('#pp-now-t');
     nextT = panel.querySelector('#pp-next-t');
     notesEl = panel.querySelector('#pp-notes');
+    curFrame = panel.querySelector('#pp-cur-frame');
+    nextFrame = panel.querySelector('#pp-next-frame');
     panel.querySelector('#pp-prev').onclick = prev;
     panel.querySelector('#pp-next-btn').onclick = next;
     panel.querySelector('#pp-black').onclick = toggleBlack;
     panel.querySelector('#pp-end').onclick = endPresenter;
+  }
+
+  // Render a faithful, scaled-down live preview of a slide into a console frame (PowerPoint-style).
+  // The clone keeps real viewport units (vw/vh) so clamp() sizing matches, then we scale it to fit.
+  function renderThumb(frame, slideIndex) {
+    if (!frame) return;
+    frame.innerHTML = '';
+    const el = slideEls[slideIndex];
+    if (!el) { frame.classList.add('pp-empty'); frame.style.height = ''; return; }
+    frame.classList.remove('pp-empty');
+    const w = window.innerWidth, h = window.innerHeight;
+    const fw = frame.clientWidth || 320;
+    const scale = fw / w;
+    const inner = document.createElement('div');
+    inner.className = 'pp-thumb';
+    inner.style.width = w + 'px';
+    inner.style.height = h + 'px';
+    inner.style.transform = 'scale(' + scale + ')';
+    const clone = el.cloneNode(true);
+    clone.classList.add('active');
+    clone.style.position = 'relative';
+    clone.style.opacity = '1';
+    clone.style.transform = 'none';
+    inner.appendChild(clone);
+    frame.appendChild(inner);
+    frame.style.height = (h * scale) + 'px';
   }
 
   function updatePresenter() {
@@ -251,7 +284,11 @@
     nextT.textContent = nxt ? (String(idx + 2).padStart(2, '0') + ' · ' + nxt.title.en) : '— end —';
     notesEl.textContent = cur && cur.notes ? cur.notes : '';
     notesEl.style.display = cur && cur.notes ? '' : 'none';
+    renderThumb(curFrame, idx);
+    renderThumb(nextFrame, idx + 1);
   }
+  // keep the console previews crisp when the controller window is resized
+  window.addEventListener('resize', () => { if (presenterOn) updatePresenter(); });
 
   // Open the projector window. If a screen is given, open straight onto it and auto-full-screen.
   // The window.open MUST run inside a live user gesture (presenter button OR chooser click),
