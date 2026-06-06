@@ -305,9 +305,7 @@ const SLIDES = [
     <div class="phones" style="margin-top:6px">
       <div class="phone"><span class="ptag livin">Mandiri Livin'</span><img src="assets/carbon-space-demo/livin-spegrk.jpg" alt="Livin' SPE-GRK certificate purchase"><div class="cap"><b>${t("Report 1 · buy SPE-GRK","Report 1 · beli SPE-GRK")}</b> — ${t("Estimate footprint → buy a <b>verified reverse SPE-GRK</b> certificate, retail.","Estimasi jejak → beli sertifikat <b>verified reverse SPE-GRK</b>, ritel.")}</div></div>
       <div class="phone"><span class="ptag livin">Mandiri Livin'</span><img src="assets/carbon-space-demo/livin-mandatory2.jpg" alt="Livin' mandatory SPE-GRK report"><div class="cap"><b>${t("Your certificates","Sertifikat Anda")}</b> — ${t("<b>verified SPE-GRK</b> &amp; IDX Carbon holdings — Indonesia's official carbon credit.","<b>SPE-GRK terverifikasi</b> &amp; kepemilikan IDX Carbon — carbon credit resmi Indonesia.")}</div></div>
-      <div class="phone"><span class="ptag livin">Mandiri Livin'</span><img src="assets/carbon-space-demo/livin-area.jpg" alt="Livin' satellite-monitored plot"><div class="cap"><b>${t("Satellite-backed","Didukung satelit")}</b> — ${t("the certificate is tied to a real monitored plot: area, tCO₂, species.","sertifikat terikat ke plot termonitor nyata: area, tCO₂, spesies.")}</div></div>
-      <div class="phone"><span class="ptag gojek">Gojek GoGreener</span><img src="assets/carbon-space-demo/gg-program.jpg" alt="GoGreener tree-planting report"><div class="cap"><b>${t("Report 2 · tree planting","Report 2 · tanam pohon")}</b> — ${t("an end user <b>contributes tree planting</b>; program, SDG impact & monitoring reported back.","end user <b>berkontribusi menanam pohon</b>; program, dampak SDG & monitoring dilaporkan.")}</div></div>
-    </div>
+      <div class="phone"><span class="ptag livin">Mandiri Livin'</span><img src="assets/carbon-space-demo/livin-area.jpg" alt="Livin' satellite-monitored plot"><div class="cap"><b>${t("Satellite-backed","Didukung satelit")}</b> — ${t("the certificate is tied to a real monitored plot: area, tCO₂, species.","sertifikat terikat ke plot termonitor nyata: area, tCO₂, spesies.")}</div></div>    </div>
   `
 },
 
@@ -321,7 +319,7 @@ const SLIDES = [
     <p class="lead" style="margin:0 0 2px">${t("Tap any screen to enlarge.","Ketuk layar mana pun untuk memperbesar.")}</p>
     <div class="phones">
       <div class="phone"><span class="ptag gojek">GoGreener</span><img src="assets/carbon-space-demo/gg-trip.jpg" alt="GoGreener contribute at ride booking"><div class="cap">${t("Contribute a tree right at <b>ride checkout</b> (Pohon Kolektif GoGreener).","Kontribusi pohon langsung saat <b>checkout perjalanan</b> (Pohon Kolektif GoGreener).")}</div></div>
-      <div class="phone"><span class="ptag livin">Mandiri Livin'</span><img src="assets/carbon-space-demo/livin-calc.jpg" alt="Livin footprint calculator"><div class="cap">${t("Measure your footprint by <b>transport mode</b> (Livin' Jaga Marathon).","Ukur jejak karbon per <b>moda transportasi</b> (Livin' Jaga Marathon).")}</div></div>
+      <div class="phone"><span class="ptag gojek">Gojek GoGreener</span><img src="assets/carbon-space-demo/gg-program.jpg" alt="GoGreener tree-planting report"><div class="cap"><b>${t("Report 2 · tree planting","Report 2 · tanam pohon")}</b> — ${t("an end user <b>contributes tree planting</b>; program, SDG impact & monitoring reported back.","end user <b>berkontribusi menanam pohon</b>; program, dampak SDG & monitoring dilaporkan.")}</div></div>
       <div class="phone"><span class="ptag gojek">GoGreener</span><img src="assets/carbon-space-demo/gg-map.jpg" alt="GoGreener monitored trees on map"><div class="cap">${t("Every planted tree <b>geotagged & monitored</b> on satellite.","Tiap pohon tertanam <b>ber-geotag & dipantau</b> via satelit.")}</div></div>
     </div>
   `
