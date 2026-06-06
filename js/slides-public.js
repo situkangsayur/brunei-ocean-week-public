@@ -400,25 +400,6 @@ const SLIDES = [
   `
 },
 
-/* 5e — HOW WE BUILD IT (tech · compliance · research) --------------------- */
-
-{
-  title:{en:"How we build it",id:"Cara kami membangun"},
-  html:`
-    <div class="kicker">${t("How the system is actually built","Bagaimana sistem ini sebenarnya dibangun")}</div>
-    <h2>${t("Building this is","Membangun ini")} <span class="leaf-text">${t("more than writing code","lebih dari sekadar menulis kode")}</span></h2>
-    <p class="lead" style="margin:0 0 6px">${t("It takes three things together — engineering, compliance, and research.","Butuh tiga hal sekaligus — rekayasa, kepatuhan, dan riset.")}</p>
-    <div class="grid g3">
-      <div class="card prodcard"><div class="phead"><span class="ico" style="font-size:36px;margin:0">🛠️</span><span class="prole">${t("Tech","Teknologi")}</span></div><p>${t("Handle massive data, reliably.","Menangani data masif, andal.")}</p><ul class="mini"><li>${t("Satellite, sound &amp; image at scale","Satelit, suara &amp; gambar dalam skala besar")}</li><li>${t("Distributed computation","Komputasi terdistribusi")}</li><li>${t("Functions across GIS &amp; domain logic","Fungsi lintas GIS &amp; logika domain")}</li></ul></div>
-      <div class="card prodcard"><div class="phead"><span class="ico" style="font-size:36px;margin:0">🛡️</span><span class="prole">${t("Compliance","Kepatuhan")}</span></div><p>${t("Built to regulation — across domains.","Dibangun sesuai regulasi — lintas domain.")}</p><ul class="mini"><li>${t("ESG &amp; carbon: GHG Protocol, SRN, Verra/Gold Standard","ESG &amp; karbon: GHG Protocol, SRN, Verra/Gold Standard")}</li><li>${t("Government &amp; finance: OJK (POJK 51) &amp; cross-domain rules","Pemerintah &amp; finance: OJK (POJK 51) &amp; aturan lintas domain")}</li><li>${t("Tech: ISO standards + data-protection law (PDP)","Teknologi: standar ISO + UU perlindungan data pribadi (PDP)")}</li></ul></div>
-      <div class="card prodcard"><div class="phead"><span class="ico" style="font-size:36px;margin:0">🔬</span><span class="prole">${t("Research","Riset")}</span></div><p>${t("Grounded in research across three fields:","Berbasis riset di tiga bidang:")}</p><ul class="mini"><li>${t("Software engineering / Computer science","Software engineering / Computer science")}</li><li>${t("Geospatial science (GIS)","Sains geospasial (GIS)")}</li><li>${t("ESG &amp; carbon-project domain","Domain ESG &amp; carbon project")}</li></ul></div>
-    </div>
-    <div class="band"><p>${t(
-      "Because it's engineering <b>and</b> compliance <b>and</b> research — handling satellite, audio &amp; imagery at scale, to the regulators' standards, grounded in science — building real blue-carbon systems takes more than one team. <b>That's exactly why it needs a hexa-helix: government, academia, industry, community, media and technology — together.</b>",
-      "Karena ini rekayasa <b>dan</b> kepatuhan <b>dan</b> riset — menangani satelit, audio &amp; citra dalam skala besar, sesuai standar regulator, berbasis sains — membangun sistem blue carbon nyata butuh lebih dari satu tim. <b>Itulah kenapa butuh hexa-helix: pemerintah, akademia, industri, komunitas, media, dan teknologi — bersama-sama.</b>")}</p></div>
-  `
-},
-
 /* 15 — COLLABORATE --------------------------------------------------------- */
 
 {
