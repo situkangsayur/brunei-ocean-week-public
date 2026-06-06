@@ -311,6 +311,22 @@ const SLIDES = [
   `
 },
 
+/* 10c — CARBON SPACE · MORE SCREENSHOTS (Livin' + GoGreener) --------------- */
+
+{
+  title:{en:"Inside the apps",id:"Di dalam aplikasi"},
+  html:`
+    <div class="kicker">${t("Carbon Space · embedded in everyday apps","Carbon Space · tertanam di aplikasi sehari-hari")}</div>
+    <h2>${t("More from","Lebih banyak dari")} <span class="ptag livin" style="position:static;font-size:.7em;vertical-align:middle">Mandiri Livin'</span> ${t("and","dan")} <span class="ptag gojek" style="position:static;font-size:.7em;vertical-align:middle">Gojek GoGreener</span></h2>
+    <p class="lead" style="margin:0 0 2px">${t("Tap any screen to enlarge.","Ketuk layar mana pun untuk memperbesar.")}</p>
+    <div class="phones">
+      <div class="phone"><span class="ptag gojek">GoGreener</span><img src="assets/carbon-space-demo/gg-trip.jpg" alt="GoGreener contribute at ride booking"><div class="cap">${t("Contribute a tree right at <b>ride checkout</b> (Pohon Kolektif GoGreener).","Kontribusi pohon langsung saat <b>checkout perjalanan</b> (Pohon Kolektif GoGreener).")}</div></div>
+      <div class="phone"><span class="ptag livin">Mandiri Livin'</span><img src="assets/carbon-space-demo/livin-calc.jpg" alt="Livin footprint calculator"><div class="cap">${t("Measure your footprint by <b>transport mode</b> (Livin' Jaga Marathon).","Ukur jejak karbon per <b>moda transportasi</b> (Livin' Jaga Marathon).")}</div></div>
+      <div class="phone"><span class="ptag gojek">GoGreener</span><img src="assets/carbon-space-demo/gg-map.jpg" alt="GoGreener monitored trees on map"><div class="cap">${t("Every planted tree <b>geotagged & monitored</b> on satellite.","Tiap pohon tertanam <b>ber-geotag & dipantau</b> via satelit.")}</div></div>
+    </div>
+  `
+},
+
 /* 11 — SPACE FOR THE OCEAN (Brunei blue carbon market) --------------------- */
 
 {
