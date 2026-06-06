@@ -12,7 +12,7 @@ const SLIDES = [
   title:{en:"Title",id:"Judul"},
   cls:"s-title",
   html:`
-    <img src="assets/logo-jejakin.png" class="logo-big" alt="Jejakin">
+    <a href="https://jejakin.com" target="_blank" rel="noopener"><img src="assets/logo-jejakin.png" class="logo-big" alt="Jejakin"></a>
     <div class="kicker">Ocean Week Brunei 2026</div>
     <h1>${t("Mangroves: The Gateway to","Mangrove: Gerbang Menuju")} <span class="grad-text">${t("Blue Carbon","Blue Carbon")}</span> ${t("and","dan")} <span class="leaf-text">${t("Smarter Seas","Laut yang Lebih Cerdas")}</span></h1>
     <p class="sub">${t(
@@ -439,6 +439,7 @@ const SLIDES = [
     <p class="lead" style="margin:14px auto 0;text-align:center">${t(
       "Mangroves are the gateway. Data and AI are the key. Let's open the door to smarter, blue-carbon seas — together.",
       "Mangrove adalah gerbangnya. Data & AI adalah kuncinya. Mari buka pintu menuju laut yang lebih cerdas & kaya blue carbon — bersama.")}</p>
+    <p class="lead" style="margin:12px auto 0;text-align:center"><b>${t("For more info","Info lebih lanjut")}: <a href="https://jejakin.com" target="_blank" rel="noopener" style="color:var(--ocean-cyan);text-decoration:underline">jejakin.com</a></b></p>
     <div class="contact">
       <span>Hendri Karisma · VP of Engineering</span>
       <a href="mailto:hendri.karisma@jejakin.com">hendri.karisma@jejakin.com</a>
